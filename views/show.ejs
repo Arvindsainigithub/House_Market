@@ -1,0 +1,29 @@
+<% layout('./Layouts/boilerplate.ejs') %>
+    <div class="row">
+        <div class="mt-3 col-8 offset-2">
+            <h1>Listing Detailes</h1>
+        </div>
+        <div class="card col-8 offset-2">
+            <img src="<%= result.image.url %>" class="card-img-top show-img" alt="listing image">
+            <div class="card-body">
+                <b class="card-title">
+                    <%= result.title %>
+                </b>
+                <p class="card-text">
+                    <%= result.description %><br>
+                        &#8377; <%= result.price %><br>
+                            <%= result.location %><br>
+                                <%= result.country %><br>
+                </p>
+                <div class="d-flex">
+                    <form method="post" action="/listings/<%=result.id%>?_method=Delete">
+                        <button class="btn btn-dark m-2 ">Delete</button>
+                    </form>
+                    <form method="get" action="/listing/<%=result.id %>/edit">
+                        <button class="btn btn-dark m-2">Edit</button>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </div>
