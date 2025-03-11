@@ -5,29 +5,29 @@
                 <p> <b>Edit Your Post Id : <%= result.id %></b> </p>
                 <div class="mb-3">
                     <label for="title" class="form-label">Title :</label>
-                    <input type="text" class="form-control" name="result[title]" id="title"
+                    <input type="text" class="form-control" name="listing[title]" id="title"
                         value="<%= result.title %>" required/>
                 </div>
                 <div class="mb-3">
                     <label for="description" class="form-label">Description :</label>
-                    <textarea type="text" class="form-control" name="result[description]"
+                    <textarea type="text" class="form-control" name="listing[description]"
                         id="description" required><%= result.description %></textarea>
                 </div>
                 <div class="row">
                 <div class="mb-3 col-md-4">
                     <label for="price" class="form-label">Price :</label>
-                    <input type="number" class="form-control" name="result[price]" id="price"
+                    <input type="number" class="form-control" name="listing[price]" id="price"
                         value="<%= result.price %>" required/>
                 </div>
                 <div class="mb-3 col-md-8">
                     <label for="country" class="form-label">Country :</label>
-                    <input type="text" class="form-control" name="result[coutry]" id="country"
+                    <input type="text" class="form-control" name="listing[country]" id="country"
                         value="<%= result.country %>" required/>
                 </div>
             </div>
                 <div class="mb-3">
                     <label for="location" class="form-label">Location :</label>
-                    <input type="text" class="form-control" name="result[location]" id="location"
+                    <input type="text" class="form-control" name="listing[location]" id="location"
                         value="<%= result.location %>" required/>
                 </div>
                 <button class="btn btn-primary">Update</button>
