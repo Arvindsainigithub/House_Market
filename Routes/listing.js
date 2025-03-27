@@ -31,7 +31,7 @@ router.get(
 router.post("/",
   validateList,
   wrapAsync(async (req, res, next) => {
-    let listings = new List(req.body);
+    let listings = new List(req.body.list);
     await listings.save();
     res.redirect("/listings");
   })

@@ -1,6 +1,6 @@
 const joi = require('joi')
 module.exports.schema=joi.object({
-    listing:joi.object({
+    list:joi.object({
         title:joi.string().required(),
         description:joi.string().required(),
         price:joi.number().required().min(0),
